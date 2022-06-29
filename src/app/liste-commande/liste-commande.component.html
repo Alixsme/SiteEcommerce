@@ -1,0 +1,27 @@
+<p>Commandes</p>
+
+<table>
+
+<tr>
+    <td>Id</td>
+    <td>Date de la commande</td>
+    <td>Details de la commande ( rajouter lignesCommande)</td>
+    <td>Supprimer Commande</td>
+    
+</tr>
+
+<tr *ngFor="let commande of commandes">
+    <td>{{commande.idCommande}}</td>
+    <td>{{commande.dateCommande}}</td>
+    <td></td>
+    <td><button (click)="supprimer(commande.idCommande)"> Supprimer </button></td>
+</tr>
+
+
+</table> <br><br>
+
+<button (click)="retour()"> Retour Accueil </button> <br> <br>
+
+
+
+<button (click)=logout() style="text-align: right">Log Out</button>

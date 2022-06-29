@@ -1,0 +1,32 @@
+<h1>Produits de la categorie</h1>
+
+
+  
+
+
+
+<form (ngSubmit)="ProduitsAssocies(c.idCategorie)">
+ 
+<table>
+    <tr>
+        <td>IdProduit</td>
+        <td>Nom</td>
+        <td>Image</td>
+        <td>Quantite</td>
+    </tr>
+
+    <tr *ngFor="let p of produits">
+    <td>{{p.idProduit}}</td>
+    <td>{{p.libProduit}}</td>
+
+    <td><img src="http://localhost:8030{{p.img}}" height="50" width="50"></td>
+
+    <td>{{p.quantite}}</td>
+
+    
+ <!-- <a routerLink="/AjouterP">Ajouter Passport</a> -->  
+    </table>
+
+</form>
+
+<button (click)="retour()"> Retour Accueil </button> <br> <br>

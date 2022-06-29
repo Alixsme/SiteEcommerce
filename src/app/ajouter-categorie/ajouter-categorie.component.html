@@ -1,0 +1,26 @@
+<h1>Ajouter une Categorie</h1>
+
+<form (ngSubmit)="AjouterC()">
+    <table>
+<tr>
+    <td>Nom Categorie</td>
+    <td><input type="text" name="nomCategorie" [(ngModel)]="c.nomCategorie"></td>
+</tr>
+
+<tr>
+    <td>Description</td>
+    <td><input type="text" name="description" [(ngModel)]="c.description"></td>
+</tr>
+
+
+
+<tr>
+<button type="submit">Valider</button> <br>
+</tr>
+
+</table>
+</form>
+
+
+
+<button (click)="retour()">Retour Accueil</button>

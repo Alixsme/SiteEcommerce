@@ -1,0 +1,46 @@
+<h1>Categorie</h1>
+
+<table>
+    <tr>
+        <td>Nom Categorie :</td>
+        <td>{{categorie.nomCategorie}}</td>
+    </tr>
+    
+    <tr>
+        <td>Description :</td>
+        <td>{{categorie.description}}</td> <br> <br> <br>
+        
+    </tr>
+    <tr>
+        <td>Produits :</td>
+
+        <td><form (ngSubmit)="ProduitsAssocies(c.idCategorie)">
+ 
+            <table>
+                <tr>
+                    <td>IdProduit</td>
+                    <td>Nom</td>
+                    <td>Image</td>
+                    <td>Quantite</td>
+                </tr>
+            
+                <tr *ngFor="let p of produits">
+                <td>{{p.idProduit}}</td>
+                <td>{{p.libProduit}}</td>
+            
+                <td><img src="http://localhost:8030{{p.img}}" height="50" width="50"></td>
+            
+                <td>{{p.quantite}}</td>
+            
+                
+             <!-- <a routerLink="/AjouterP">Ajouter Passport</a> -->  
+                </table>
+            
+            </form></td>
+    </tr>
+    
+  
+    
+    </table> <br>
+
+<button (click)="retour()"> Retour Accueil </button> 

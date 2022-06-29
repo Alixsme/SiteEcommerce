@@ -1,0 +1,43 @@
+<h1>Ajouter Votre Produit</h1>
+
+
+
+<form (ngSubmit)="AjouterP()">
+    <table>
+<tr>
+    <td>Nom Produit</td>
+    <td><input type="text" name="libProduit" [(ngModel)]="p.libProduit"></td>
+</tr>
+
+<tr>
+    <td>Image</td>
+    <td>
+        
+            <div>
+        <input type="file" name="fileInput" id="fileInput" (change)="selectedEvent($event)">
+            </div>
+            
+      
+    </td>
+</tr>
+<tr>
+    <td>Quantite</td>
+    <td><input type="number" name="quantite" [(ngModel)]="p.quantite"></td>
+</tr>
+
+<tr>
+    <td>Categorie</td>
+    <select [(ngModel)]="selectedValue" name="selectedValue">
+        <option *ngFor="let c of categories" [ngValue]="c">{{c.nomCategorie}}</option>
+    </select>
+</tr>
+
+<tr>
+<button type="submit" name="Save">Valider</button> <br>
+</tr>
+
+</table>
+</form>
+
+<br> <br>
+    <button (click)="retour()">Retour Accueil</button>

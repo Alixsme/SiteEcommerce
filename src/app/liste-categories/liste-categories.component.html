@@ -1,0 +1,40 @@
+<h1>Nos Categories disponibles</h1>
+
+<td><button (click)="ajouterCategorie(c)">Ajouter une Categorie</button></td> <br> <br>
+
+<table>
+    <tr>
+        <td>IdCategorie</td>
+        <td>Nom Categorie</td>
+        <td>Description</td>
+        <td>Produits</td>
+        
+
+        <td>Modifier</td>
+        <td>Supprimer</td>
+    </tr>
+
+    <tr *ngFor="let c of categories">
+    <td>{{c.idCategorie}}</td>
+    <td>{{c.nomCategorie}}</td>
+
+    <td>{{c.description}}</td>
+
+    <td><button (click)="produitsAssocies(c.idCategorie)">Liste Produits</button></td>
+
+   
+
+        <!--Rajouter les 2 methodes dans ts-->
+
+    <td><button (click)="modifier(c.idCategorie)">Modifier</button></td>
+    <td><button (click)="supprimer(c.idCategorie)">Supprimer</button></td>
+    </tr>
+    
+ <!-- <a routerLink="/AjouterP">Ajouter Passport</a> -->  
+    </table>
+
+<button (click)="retour()"> Retour Accueil </button> <br> <br>
+
+
+
+    <button (click)=logout() style="text-align: right">Log Out</button>

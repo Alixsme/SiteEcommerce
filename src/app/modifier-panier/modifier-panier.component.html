@@ -1,0 +1,27 @@
+<p>modifier-panier works!</p>
+
+<form (ngSubmit)="Modif()">
+
+    <table>
+
+        <tr>
+            <td>Produit</td>
+            <td>Quantite</td>
+            <td>Modifier</td>
+            <td>Supprimer</td>
+            
+        </tr>
+    
+        <tr *ngFor="let lp of lignePaniers; let i=index">
+            <td><input type="text" name="libProduit{{i}}" [(ngModel)]="lp.produit.libProduit"></td>
+            <td><input type="number" name="quantite{{i}}" [(ngModel)]="lp.produit.quantite"></td>
+            <td><input type="submit"> Valider modifications</td>
+            <td><button (click)="supprimer(lp.idLignePanier)">Supprimer</button></td>
+            
+        </tr>
+        
+    
+    </table>
+    
+
+</form>

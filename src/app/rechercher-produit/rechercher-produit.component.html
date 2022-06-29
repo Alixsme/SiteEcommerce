@@ -1,0 +1,36 @@
+<h1>Produits</h1>
+
+<table>
+    <tr>
+        <td>IdProduit</td>
+        <td>Nom</td>
+        <td>Image</td>
+        <td>Quantite</td>
+        <td>Categorie</td>
+
+    </tr>
+
+    <tr *ngFor="let p of produits">
+    <td>{{p.idProduit}}</td>
+    <td>{{p.libProduit}}</td>
+
+    <td><img src="http://localhost:8030{{p.img}}" height="50" width="50"></td>
+
+    <td>{{p.quantite}}</td>
+
+    <td>{{p.cate.nomCategorie}}</td>
+
+        <!--Rajouter les 2 methodes dans ts-->
+
+
+    
+ <!-- <a routerLink="/AjouterP">Ajouter Passport</a> -->  
+    </table>
+
+
+    
+    <button (click)="retour()"> Retour Accueil </button> <br> <br>
+
+
+
+    <button (click)=logout() style="text-align: right">Log Out</button>

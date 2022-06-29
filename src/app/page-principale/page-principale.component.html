@@ -1,0 +1,29 @@
+Accueil <br><br>
+
+Rajouter Style Bootstrap partout <br> <br>
+
+
+
+<button (click)="afficherCategories()">Afficher les categories</button> <br>
+
+<button (click)="afficherProduits()">Afficher les produits</button> <br> <br>
+
+
+
+<form (ngSubmit)="search()">
+    <input type="text" class="search-query" placeholder="Chercher un Produit" name="selectProduit" [(ngModel)]="selectProduit">
+    <button type="submit">Rechercher</button>
+
+</form>
+
+
+
+<button (click)="afficherPanier()">Panier</button> <br> <br>
+
+<button (click)="afficherCommandes()">Commandes</button> <br> <br>
+
+
+<button (click)=logout() style="text-align: right">Log Out</button>
+
+
+<button (click)="supprimerCompte(u.id)" style="text-align: right">Supprimer Compte A FAIRE</button>

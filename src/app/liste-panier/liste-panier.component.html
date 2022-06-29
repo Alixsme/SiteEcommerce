@@ -1,0 +1,50 @@
+<h1>Votre Panier</h1>
+
+
+Rajouter formulaire pour créer un panier
+
+<form (ngSubmit)="ajouterUnPanier()">
+    <button type="submit">Creer un panier</button>
+</form> <br>
+
+
+<form>
+
+<table>
+
+
+
+    <tr>
+        <td>id</td>
+        <td>Produits</td>
+        <td>Modifier</td>
+        <td>Supprimer</td>
+        <td>Commander</td>
+    </tr>
+
+    <tr *ngFor="let panier of paniers">
+        <td>{{panier.idPanier}}</td>
+        <td>
+            <div *ngFor="let lp of lignePaniers">
+            <div *ngIf="lp.panier.idPanier===panier.idPanier">{{lp.produit.libProduit}} x {{lp.quantite}}</div>
+            </div>
+        </td>
+    </tr> <br><br>
+
+        <tr><button (click)="modifier(panier.idPanier)">Modifier Panier</button></tr>
+        <tr><button (click)="supprimer()">Supprimer Panier</button></tr>
+        <tr><button (click)="commander()">Passer la commande</button></tr>
+ 
+
+
+</table>
+
+
+</form> <br>
+
+
+<button (click)="retour()"> Retour Accueil </button> <br> <br>
+
+
+
+    <button (click)=logout() style="text-align: right">Log Out</button>

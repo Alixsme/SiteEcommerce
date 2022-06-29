@@ -1,0 +1,26 @@
+<h1>Page Produit</h1>
+
+<table>
+    <tr>
+        <td>Nom Produit</td>
+        <td>{{produit.libProduit}}</td>
+    </tr>
+    
+    <tr>
+        <td>Image</td>
+        <td><img src="http://localhost:8030{{produit.img}}" height="50" width="50"></td>
+        
+    </tr>
+    <tr>
+        <td>Quantite</td>
+        <td>{{produit.quantite}}</td>
+    </tr>
+    
+    <tr>
+        <td>Categorie</td>
+        <td>{{produit.cate.nomCategorie}}</td>
+    </tr>
+    
+    </table>
+
+    <button (click)="retour()"> Retour Accueil </button> 

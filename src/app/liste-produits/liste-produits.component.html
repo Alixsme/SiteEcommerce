@@ -1,0 +1,46 @@
+<h1>Tous nos produits</h1>
+
+<td><button (click)="ajouterProduit(p)">Ajouter un produit</button></td> <br> <br>
+
+
+<table>
+    <tr>
+        <td>IdProduit</td>
+        <td>Nom</td>
+        <td>Image</td>
+        <td>Quantite</td>
+        <td>Categorie</td>
+
+        <td>Modifier</td>
+        <td>Supprimer</td>
+    </tr>
+
+    <tr *ngFor="let p of produits">
+    <td>{{p.idProduit}}</td>
+    <td>{{p.libProduit}}</td>
+
+    <td><img src="http://localhost:8030{{p.img}}" height="50" width="50"></td>
+
+    <td>{{p.quantite}}</td>
+
+    <td>{{p.cate.nomCategorie}}</td>
+
+        <!--Rajouter les 2 methodes dans ts-->
+
+    <td><button (click)="modifier(p.idProduit)">Modifier</button></td>
+    <td><button (click)="supprimer(p.idProduit)">Supprimer</button></td>
+    <td><button (click)="ajouterAuPanier(p.idProduit)">Ajouter au panier</button></td>
+    </tr>
+    
+ <!-- <a routerLink="/AjouterP">Ajouter Passport</a> -->  
+    </table>
+
+
+    
+    <button (click)="retour()"> Retour Accueil </button> <br> <br>
+
+
+
+    <button (click)=logout() style="text-align: right">Log Out</button>
+
+
